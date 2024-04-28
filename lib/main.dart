@@ -15,6 +15,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Widget MaterialApp that will be returned
     return const MaterialApp(
+      // Delete the Debug sign "Banner is the name"
+      debugShowCheckedModeBanner: false,
       // using Scaffold
       home: Scaffold(
         // Center the Scaffold
