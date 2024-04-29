@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Counter extends StatelessWidget {
+class Counter extends StatefulWidget {
   const Counter({super.key});
+
+  @override
+  State<Counter> createState() => _CounterState();
+}
+
+class _CounterState extends State<Counter> {
+  int clickCounter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,7 @@ class Counter extends StatelessWidget {
         title: const Text('Counter Screen',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500)),
       ),
-      body: const Center(
+      body: Center(
         //Column recives multiple childs
         child: Column(
           // change colum direction
@@ -22,10 +29,12 @@ class Counter extends StatelessWidget {
           //Here we can use , multiple widgets
           children: [
             Text(
-              '110',
-              style: TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
+                '$clickCounter',
+                style:
+                    const TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
+                s
             ),
-            Text(
+            const Text(
               'Clicks',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w100),
             )
@@ -33,7 +42,11 @@ class Counter extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            clickCounter++;
+          });
+        },
         child: const Icon(Icons.plus_one),
       ),
     );
