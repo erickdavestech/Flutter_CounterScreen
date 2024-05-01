@@ -53,7 +53,10 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
                 // Condition to click is more than 1 click
                 'Click${clickCounter == 1 ? '' : 's'}',
                 style:
-                    const TextStyle(fontSize: 30, fontWeight: FontWeight.w100),
+                    const TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w100,
+                ),
               )
             ],
           ),
@@ -105,6 +108,8 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       shape: const StadiumBorder(),
+      enableFeedback: true,
+      focusElevation: 5,
       onPressed: onPressed,
       child: Icon(icon),
     );
