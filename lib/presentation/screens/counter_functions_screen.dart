@@ -61,9 +61,24 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            // Creamos dos   FloatingActionButton
+            // Creamos tres   FloatingActionButton
+            // Reset counter
+            FloatingActionButton(
+              shape: const StadiumBorder(),
+              onPressed: () {
+                // Ste estate to render
+                setState(() {
+                  // Variable to ++ for change the text
+                  clickCounter = 0;
+                });
+              },
+              child: const Icon(Icons.refresh_outlined),
+            ),
+            const SizedBox(height: 10),
             // Incrementa
             FloatingActionButton(
+              // forma redondeada
+              shape: const StadiumBorder(),
               onPressed: () {
                 // Ste estate to render
                 setState(() {
@@ -78,6 +93,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             ),
             // Descrementa y asegura que no se pueda menor que 0
             FloatingActionButton(
+              shape: const StadiumBorder(),
               onPressed: () {
                 // Ste estate to render
                 setState(() {
@@ -88,6 +104,12 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
               },
               child: const Icon(Icons.exposure_minus_1_outlined),
             ),
+
+          
+
+           
+
+
           ],
         ));
   }
