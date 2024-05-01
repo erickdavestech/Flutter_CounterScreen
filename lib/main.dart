@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_daves/presentation/screens/counter.dart';
+import 'package:flutter_daves/presentation/screens/counter_functions_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,6 +13,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
-        home: const Counter());
+        home: const CounterFunctionsScreen());
   }
 }
