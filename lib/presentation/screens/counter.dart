@@ -32,7 +32,7 @@ class _CounterState extends State<Counter> {
                 '$clickCounter',
                 style:
                     const TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
-                s
+                
             ),
             const Text(
               'Clicks',
